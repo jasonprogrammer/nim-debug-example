@@ -42,7 +42,8 @@ After pressing [enter], you should see success:
 ![load nim-gdb.py success](images/debug-console-load-nim-gdb.png)
 
 Note: The `nim-gdb.py` script was copied from [here](https://github.com/nim-lang/Nim/blob/master/tools/nim-gdb.py),
-and exists in the `bin/` directory simply to reduce the number of steps in setting this up.
+and exists in the `bin/` directory simply to reduce the number of steps in setting this up. It might be a good
+idea to update your local copy of this file with the official latest file from the repository.
 
 If running the Python pretty-printing script succeeds, you should be able to mouse over a variable,
 e.g. a string, and see the value:
