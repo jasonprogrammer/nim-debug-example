@@ -18,8 +18,15 @@ This repository contains some files to help setup debugging in VSCode.
 1. Open VSCode.
 2. File -> Open Folder -> Open the cloned repository folder in VSCode.
 3. Open `main.nim`.
-4. Set a breakpoint.
+4. Set a breakpoint on line 15 in the file:
+
+![setting a breakpoint in main.nim on line 15](images/vscode-set-breakpoint.png)
+
 5. Build the code (ctrl-shift-b), which should use the build definition in `.vscode/tasks.json`.
+My preference is to set "Build on Save" in the VSCode-Nim configuration:
+
+![setting build on save in vscode-nim](images/vscode-nim-config.png)
+
 5. Debug -> Start Debugging, which should use the launch config in `.vscode/launch.json`.
 6. Once the breakpoint is hit, let's enable pretty-printing. Otherwise, when you mouse over a
 symbol in the debugger, you'll see memory addresses instead of values.
