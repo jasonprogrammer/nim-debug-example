@@ -37,6 +37,10 @@ Open the Debug Console (at the bottom) and type:
 python exec(open("bin/nim-gdb.py").read())
 ```
 
+After pressing [enter], you should see success:
+
+![load nim-gdb.py success](images/debug-console-load-nim-gdb.png)
+
 Note: The `nim-gdb.py` script was copied from [here](https://github.com/nim-lang/Nim/blob/master/tools/nim-gdb.py),
 and exists in the `bin/` directory simply to reduce the number of steps in setting this up.
 
@@ -46,7 +50,14 @@ e.g. a string, and see the value:
 ![mousing over a variable in the debugger and seeing the value contained in the variable](images/debugger-mouseover-str.png)
 
 You'll notice, however, if you mouseover `people[0].name`, that it does not show the name of the first person
-(perhaps the `nim3.py` script could be modified to support this).
+(perhaps the `nim-gdb.py` script could be modified to support this). Even though this functionality doesn't exist,
+you can type `print people[0].name` in the Debug Console to print the value:
+
+![type print variable in vscode debug console](images/vscode-debug-console-print1.png)
+
+Press [enter], and you should see the contents of the variable:
+
+![debug console showing variable contents](images/vscode-debug-console-print2.png)
 
 ## Notes
 
