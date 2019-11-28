@@ -7,9 +7,10 @@ Below are some steps to help you debug [Nim](https://nim-lang.org/) code in [Vis
 1. Nim is installed.
 2. GDB is installed.
 3. VSCode is installed.
-4. The [Nim VSCode extension](https://marketplace.visualstudio.com/items?itemName=kosz78.nim) is installed.
-5. The [Native Debug VSCode extension](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) is installed.
-6. This example repository has been cloned with [Git](https://git-scm.com/).
+4. Python 3 is installed (used for pretty-printing with GDB).
+5. The [Nim VSCode extension](https://marketplace.visualstudio.com/items?itemName=kosz78.nim) is installed.
+6. The [Native Debug VSCode extension](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) is installed.
+7. This example repository has been cloned with [Git](https://git-scm.com/).
 
 ## Steps to setup debugging
 
@@ -36,6 +37,8 @@ Open the Debug Console (at the bottom) and type:
 ```
 python exec(open("bin/nim-gdb.py").read())
 ```
+
+(Note: The version of GDB I have installed was built to run with Python 3, and this script works with Python 3)
 
 After pressing [enter], you should see success:
 
