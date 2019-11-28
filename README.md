@@ -34,19 +34,11 @@ symbol in the debugger, you'll see memory addresses instead of values.
 Open the Debug Console (at the bottom) and type:
 
 ```
-python exec(open("bin/nim3.py").read())
+python exec(open("bin/nim-gdb.py").read())
 ```
 
-and press [enter], to run a Python script that sets up the symbols in GDB.
-
-If this returns an error, try running the Python 2 version:
-
-```
-python execfile("bin/nim.py")
-```
-
-Note: The `nim.py` and `nim3.py` scripts were copied from [nim-gdb](https://github.com/cooldome/Nim-gdb),
-and exist in the `bin/` directory simply to reduce the number of steps in setting this up.
+Note: The `nim-gdb.py` script was copied from [here](https://github.com/nim-lang/Nim/blob/master/tools/nim-gdb.py),
+and exists in the `bin/` directory simply to reduce the number of steps in setting this up.
 
 If running the Python pretty-printing script succeeds, you should be able to mouse over a variable,
 e.g. a string, and see the value:
@@ -58,13 +50,11 @@ You'll notice, however, if you mouseover `people[0].name`, that it does not show
 
 ## Notes
 
-GDB can be extended with Python, and it seems that there are two scripts (written by others) for doing this:
+GDB can be extended with Python, and the [nim-gdb.py](https://github.com/nim-lang/Nim/blob/master/tools/nim-gdb.py) script
+can be used from the command-line using [this bash script](https://github.com/nim-lang/Nim/blob/devel/bin/nim-gdb).
 
-1. The nim-gdb project: [nim-gdb](https://github.com/cooldome/Nim-gdb)  
-2. From the Nim source:
-
-[nim-gdb bash script](https://github.com/nim-lang/Nim/blob/devel/bin/nim-gdb)  
-[nim-gdb.py file, Nim repository](https://github.com/nim-lang/Nim/blob/devel/tools/nim-gdb.py)  
+The [nim-gdb repository](https://github.com/cooldome/Nim-gdb) seems to be the predecessor to the nim-gdb script
+in the official Nim repository.
 
 ## References
 
