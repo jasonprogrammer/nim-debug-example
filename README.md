@@ -46,6 +46,9 @@ e.g. a string, and see the value:
 
 ![mousing over a variable in the debugger and seeing the value contained in the variable](images/debugger-mouseover-str.png)
 
+You'll notice, however, if you mouseover `people[0].name`, that it does not show the name of the first person
+(perhaps the `nim3.py` script could be modified to support this).
+
 ## Notes
 
 GDB can be extended with Python, and it seems that there are two scripts (written by others) for doing this:
