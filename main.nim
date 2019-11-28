@@ -16,12 +16,3 @@ proc main() =
   echo people[0].name
 
 main()
-
-# this method is needed for the pretty-printing (nim-gdb) during debugging
-# see: https://github.com/cooldome/Nim-gdb#known-limitations
-proc nimDebugDoNotRemove() =
-  type
-    NimDebug = enum nimDebug
-  echo repr(nimDebug)
-
-nimDebugDoNotRemove()
